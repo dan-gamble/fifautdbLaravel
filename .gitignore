@@ -11,10 +11,4 @@ config.codekit
 .codekit-cache
 eapulls
 
-/public/assets/img/badges
-/public/assets/img/cards
-/public/assets/img/clubs
-/public/assets/img/kits
-/public/assets/img/leagues
-/public/assets/img/nations
 /public/assets/img/players
