@@ -1,0 +1,28 @@
+// Lists
+
+.list-unstyled,
+.list-unstyled ul {
+	margin-left: 0;
+
+	list-style: none;
+	// Form stying in lists
+	input[type="checkbox"] {
+		margin: 0;
+	}
+}
+
+.list-striped {
+	li {
+		&:nth-child(odd) {
+			background: darken(#f9f9f9, 2%);
+		}
+	}
+}
+
+.divide {
+	height: 1px;
+	margin: 9px 1px;
+	overflow: hidden;
+	background-color: #8abe11;
+	border-bottom: 1px solid #000;
+}

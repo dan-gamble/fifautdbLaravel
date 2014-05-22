@@ -1,0 +1,12 @@
+/bootstrap/compiled.php
+.env.*.php
+.env.php
+/public/assets/img
+vagrantfile
+package.box
+fifautdb.sublime-workspace
+fifautdb.sublime-project
+config.codekit
+.vagrant
+.idea
+.codekit-cache
