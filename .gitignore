@@ -1,7 +1,6 @@
 /bootstrap/compiled.php
 .env.*.php
 .env.php
-/public/assets/img
 vagrantfile
 package.box
 fifautdb.sublime-workspace
@@ -11,3 +10,11 @@ config.codekit
 .idea
 .codekit-cache
 eapulls
+
+/public/assets/img/badges
+/public/assets/img/cards
+/public/assets/img/clubs
+/public/assets/img/kits
+/public/assets/img/leagues
+/public/assets/img/nations
+/public/assets/img/players
