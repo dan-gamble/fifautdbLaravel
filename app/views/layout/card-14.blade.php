@@ -24,7 +24,7 @@
 		<div class="card-name">{{ $player->card_name() }}</div>
 		<div class="card-position">{{ $player->role() }}</div>
 		<div class="card-nation">
-			<img src="http://www.futwiz.com/assets/img/fifa14/flags/{{ $player->nation_id }}.png" height="16" width="26">
+			<img src="/assets/img/nations/{{ $player->nation_id }}.png" height="16" width="26">
 		</div>
 		<div class="card-club">
 			<img src="/assets/img/clubs/{{ $player->club_id }}.png" height="27" width="27">

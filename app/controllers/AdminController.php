@@ -9,8 +9,206 @@ class AdminController extends \BaseController {
 	 */
 	public function index()
 	{
-		// Create the view and parse variables
+		// Create the view
         return View::make('admin.index');
+	}
+
+	public function player()
+	{
+		// Create the view
+		return View::make('admin.player.index');
+	}
+
+	public function playerFind()
+	{
+		// Get the name that was input
+		$keyword = Input::get('player');
+
+		// Return the list of players ordered by rating
+		$playerBack = Player::orderBy('overall_rating', 'desc')->where('common_name', 'LIKE', '%'.$keyword.'%')->get();
+
+		// Create the view and parse the player list
+		return View::make('admin.player.find', ['playerBack' => $playerBack]);
+	}
+	public function playerExisting($id)
+	{
+		// Get the player data to fill the existing values
+		$player = Player::findOrFail($id);
+
+		// Define list of Roles new player can choose from
+		$role = [
+			'0' => 'GK',
+			'2' => 'RWB',
+			'3' => 'RB',
+        	'5' => 'CB',
+        	'7' => 'LB',
+        	'8' => 'LWB',
+        	'10' => 'CDM',
+        	'14' => 'CM',
+        	'12' => 'RM',
+        	'16' => 'LM',
+        	'18' => 'CAM',
+        	'21' => 'CF',
+        	'23' => 'RW',
+        	'25' => 'ST',
+			'27' => 'LW'
+		];
+
+		// Retrieve list of clubs from database to use when selecting the new players club
+		$club = Club::orderBy('club_name', 'asc')->lists('club_name', 'asset_id');
+
+		// Retrieve list of leagues from database to use when selecting the new players league
+		$league = League::orderBy('league_name', 'asc')->lists('league_name', 'asset_id');
+
+		// Retrieve list of nations from database to use when selecting the new players nation
+		$nation = Nation::orderBy('nation_name', 'asc')->lists('nation_name', 'asset_id');
+
+		// Create the view and parse back the player variable
+		return View::make('admin.player.existing', [
+			'club'   => $club,
+			'league' => $league,
+			'nation' => $nation,
+            'player' => $player,
+            'role'   => $role
+        ]);
+	}
+
+	public function playerExistingCreate()
+	{
+		// Collect all input variables and put them into an array
+		$input =
+		[
+			'asset_id' => Input::get('asset_id'),
+            'first_name' => Input::get('first_name'),
+            'last_name' => Input::get('last_name'),
+            'common_name' => Input::get('common_name'),
+            'overall_rating' => Input::get('overall_rating'),
+            'card_att1' => Input::get('card_att1'),
+            'card_att2' => Input::get('card_att2'),
+            'card_att3' => Input::get('card_att3'),
+            'card_att4' => Input::get('card_att4'),
+            'card_att5' => Input::get('card_att5'),
+            'card_att6' => Input::get('card_att6'),
+            'card_type' => Input::get('card_type'),
+            'item_type' => Input::get('item_type'),
+            'card_set' => Input::get('card_set'),
+            'club_id' => Input::get('club'),
+            'league_id' => Input::get('league'),
+            'nation_id' => Input::get('nation'),
+            'shirt_number' => Input::get('shirt_number'),
+            'height' => Input::get('height'),
+            'weight' => Input::get('weight'),
+            'role' => Input::get('role'),
+            'weak_foot' => Input::get('weak_foot'),
+            'pref_foot' => Input::get('pref_foot'),
+            'skill_moves' => Input::get('skill_moves'),
+            'attrates' => Input::get('attrates'),
+            'defrates' => Input::get('defrates'),
+            'ball_control' => Input::get('ball_control'),
+            'curve' => Input::get('curve'),
+            'finishing' => Input::get('finishing'),
+            'heading_accuracy' => Input::get('heading_accuracy'),
+            'long_shots' => Input::get('long_shots'),
+            'penalties' => Input::get('penalties'),
+            'shot_power' => Input::get('shot_power'),
+            'standing_tackle' => Input::get('standing_tackle'),
+            'crossing' => Input::get('crossing'),
+            'dribbling' => Input::get('dribbling'),
+            'free_kick_accuracy' => Input::get('free_kick_accuracy'),
+            'long_passing' => Input::get('long_passing'),
+            'marking' => Input::get('marking'),
+            'short_passing' => Input::get('short_passing'),
+            'sliding_tackle' => Input::get('sliding_tackle'),
+            'volleys' => Input::get('volleys'),
+            'aggression' => Input::get('aggression'),
+            'interceptions' => Input::get('interceptions'),
+            'positioning' => Input::get('positioning'),
+            'vision' => Input::get('vision'),
+            'acceleration' => Input::get('acceleration'),
+            'balance' => Input::get('balance'),
+            'reactions' => Input::get('reactions'),
+            'strength' => Input::get('strength'),
+            'agility' => Input::get('agility'),
+            'jumping' => Input::get('jumping'),
+            'sprint_speed' => Input::get('sprint_speed'),
+            'stamina' => Input::get('stamina'),
+            'day' => Input::get('day'),
+            'month' => Input::get('month'),
+            'year' => Input::get('year'),
+            'gk_diving' => Input::get('gk_diving'),
+            'gk_handling' => Input::get('gk_handling'),
+            'gk_kicking' => Input::get('gk_kicking'),
+            'gk_reflexes' => Input::get('gk_reflexes'),
+            'gk_positioning' => Input::get('gk_positioning')
+        ];
+        $dob = $input['year'].'-'.$input['month'].'-'.$input['day'];
+        $player = new Player;
+        $player->asset_id = $input['asset_id'];
+        $player->first_name = $input['first_name'];
+        $player->last_name = $input['last_name'];
+        $player->common_name = $input['common_name'];
+        $player->overall_rating = $input['overall_rating'];
+        $player->card_att1 = $input['card_att1'];
+        $player->card_att2 = $input['card_att2'];
+        $player->card_att3 = $input['card_att3'];
+        $player->card_att4 = $input['card_att4'];
+        $player->card_att5 = $input['card_att5'];
+        $player->card_att6 = $input['card_att6'];
+        $player->card_type = $input['card_type'];
+        $player->item_type = $input['item_type'];
+        $player->card_set = $input['card_set'];
+        $player->club_id = $input['club_id'];
+        $player->league_id = $input['league_id'];
+        $player->nation_id = $input['nation_id'];
+        $player->shirt_number = $input['shirt_number'];
+        $player->dob = $dob;
+        $player->join_date = $player->join_date;
+        $player->height = $input['height'];
+        $player->weight = $input['weight'];
+        $player->position = $player->position;
+        $player->role = $input['role'];
+        $player->pref_foot = $input['pref_foot'];
+        $player->weak_foot = $input['weak_foot'];
+        $player->skill_moves = $input['skill_moves'];
+        $player->att_workrate = $input['attrates'];
+        $player->def_workrate = $input['defrates'];
+        $player->acceleration = $input['acceleration'];
+        $player->sprint_speed = $input['sprint_speed'];
+        $player->agility = $input['agility'];
+        $player->balance = $input['balance'];
+        $player->jumping = $input['jumping'];
+        $player->stamina = $input['stamina'];
+        $player->strength = $input['strength'];
+        $player->reactions = $input['reactions'];
+        $player->aggression = $input['aggression'];
+        $player->interceptions = $input['interceptions'];
+        $player->positioning = $input['positioning'];
+        $player->vision = $input['vision'];
+        $player->ball_control = $input['ball_control'];
+        $player->crossing = $input['crossing'];
+        $player->dribbling = $input['dribbling'];
+        $player->finishing = $input['finishing'];
+        $player->free_kick_accuracy = $input['free_kick_accuracy'];
+        $player->heading_accuracy = $input['heading_accuracy'];
+        $player->long_passing = $input['long_passing'];
+        $player->short_passing = $input['short_passing'];
+        $player->marking = $input['marking'];
+        $player->long_shots = $input['long_shots'];
+        $player->shot_power = $input['shot_power'];
+        $player->standing_tackle = $input['standing_tackle'];
+        $player->sliding_tackle = $input['sliding_tackle'];
+        $player->volleys = $input['volleys'];
+        $player->curve = $input['curve'];
+        $player->penalties = $input['penalties'];
+        $player->gk_diving = $input['gk_diving'];
+        $player->gk_handling = $input['gk_handling'];
+        $player->gk_kicking = $input['gk_kicking'];
+        $player->gk_reflexes = $input['gk_reflexes'];
+        $player->gk_positioning = $input['gk_positioning'];
+        // $player->save();
+		// Redirect to create player home with flash messag;
+		return dd($input);
+		// return Redirect::to('admin/player')->withFlashMessage($input['player_name'] . " added!");
 	}
 
 	public function totw()

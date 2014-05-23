@@ -23,7 +23,7 @@ class PagesController extends BaseController {
 	{
 		$keyword = Input::get('keyword');
 
-		$playerBack = Player::where('common_name', 'LIKE', '%'.$keyword.'%')->get();
+		$playerBack = Player::orderBy('overall_rating', 'desc')->where('common_name', 'LIKE', '%'.$keyword.'%')->get();
 
 		return View::make('home', ['playerBack' => $playerBack]);
 	}

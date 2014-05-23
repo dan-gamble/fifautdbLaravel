@@ -2,6 +2,7 @@
 
 class Player extends Eloquent {
 	public $table = 'player_data_14';
+    public $timestamps = true;
 
     public function comments()
     {
@@ -39,6 +40,18 @@ class Player extends Eloquent {
         }
     }
 
+    public function attr_admin($label, $secondary = [])
+    {
+        $attr = space_to_underscore($label);
+        if ($secondary != null) {
+            $output = '<li>'.$label.' ('.$secondary.')'.Form::text($attr, $this->$attr, ['class' => 'existing-player-input']).'</li>';
+        } else {
+            $output = '<li>'.$label.Form::text($attr, $this->$attr, ['class' => 'existing-player-input']).'</li>';
+        }
+
+        return $output;
+    }
+
     public function card_name()
     {
         $myString = $this->common_name;
@@ -52,6 +65,8 @@ class Player extends Eloquent {
     {
         if ($this->card_type == 12) {
             $card_type = 'player-card-legend';
+        } elseif ($this->card_type == 5) {
+            $card_type = 'player-card-motm';
         } elseif ($this->overall_rating > 74 && $this->card_type == 3) {
             $card_type = 'player-card-gold-tots';
         } elseif ($this->overall_rating > 74 && $this->card_type == 2) {

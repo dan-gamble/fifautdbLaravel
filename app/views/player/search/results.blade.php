@@ -48,9 +48,9 @@
                         @foreach ($players as $player)
                         <tr>
                             <td>
-                                <img src="http://fh13.fhcdn.com/static/img/14/players/{{ $player->asset_id }}.png" height="40" width="40">
+                                <img src="/assets/img/players/{{ $player->asset_id }}.png" height="40" width="40">
                                 <a href="{{ $player->url_str() }}">{{ $player->common_name }}</a><br>
-                                <img src="http://www.futwiz.com/assets/img/fifa14/flags/{{ $player->nation_id }}.png" height="16" width="26">
+                                <img src="/assets/img/nations/{{ $player->nation_id }}.png" height="16" width="26">
                             </td>
                             <td>{{ $player->overall_rating }}</td>
                             <td>{{ $player->role }}</td>

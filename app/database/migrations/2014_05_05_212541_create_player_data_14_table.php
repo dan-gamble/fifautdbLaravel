@@ -13,7 +13,7 @@ class CreatePlayerData14Table extends Migration {
 	public function up()
 	{
 		Schema::create('player_data_14', function(Blueprint $table) {
-			$table->increments('id');
+		$table->increments('id');
             $table->integer('asset_id')->unsigned()->unique();
             $table->string('first_name')->nullable();
             $table->string('last_name')->nullable();
@@ -75,7 +75,7 @@ class CreatePlayerData14Table extends Migration {
             $table->integer('gk_kicking')->unsigned()->nullable();
             $table->integer('gk_reflexes')->unsigned()->nullable();
             $table->integer('gk_positioning')->unsigned()->nullable();
-			$table->timestamps();
+		$table->timestamps();
 		});
 	}
 

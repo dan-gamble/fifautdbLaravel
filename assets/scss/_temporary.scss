@@ -195,12 +195,14 @@ fieldset .search-input {
 	}
 }
 
-.player-card-legend    		{
+.player-card-legend {
 	background: url('/assets/img/cards/legend.png');
 
 	color: #9F862A;
 	text-shadow: 1px 1px 1px rgba(159,134,42,0.4);
 }
+
+.player-card-motm 			{ background: url('/assets/img/cards/motm.png');			}
 
 .player-card-gold-rare 	    { background: url('/assets/img/cards/gold-rare.png'); 		}
 .player-card-gold-nonrare   { background: url('/assets/img/cards/gold-nonrare.png'); 	}
@@ -353,6 +355,20 @@ form { // Definitely needs to be fixed
 .ad-300 {
 	margin: 0 auto 10px;
 	width: 300px;
+}
+
+// Stying of stat inputs in admin/totw/existing/{player_id}
+.existing-player-input[type="text"],
+.existing-player-input {
+	float: right;
+	height: 20px; width: 65px;
+	margin: 2px 0;
+	padding: 0;
+
+	text-align: center;
+	&:not([type="text"]) {
+		text-indent: 10px;
+	}
 }
 
 .mt-10 { margin-top: 10px; }

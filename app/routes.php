@@ -48,9 +48,39 @@ Route::get('/',
 Route::post('/', 'PagesController@indexPost');
 
 // Admin Routes
-Route::get('admin', 'AdminController@index');
-Route::get('admin/totw', 'AdminController@totw');
-Route::post('admin/totw', 'AdminController@totwCreate');
+Route::get('admin',
+    [
+        'as' => 'admin',
+        'uses' => 'AdminController@index'
+    ]);
+    // Create TOTW
+    Route::get('admin/totw',
+        [
+            'as' =>'admin.totw',
+            'uses' => 'AdminController@totw'
+        ]);
+    Route::post('admin/totw', 'AdminController@totwCreate');
+    // Create Player
+    Route::get('admin/player',
+        [
+            'as' => 'admin.player',
+            'uses' => 'AdminController@player'
+        ]);
+        // Show list of existing players to create from
+        Route::post('admin/player/find', 'AdminController@playerFind');
+            // Create player based on existing
+            Route::get('admin/player/existing/{player_id}',
+                [
+                    'as' => 'admin.player.existing',
+                    'uses' => 'AdminController@playerExisting'
+                ]);
+        // Create fresh Player
+        Route::get('admin/player/fresh',
+            [
+                'as' => 'admin.player.fresh',
+                'uses' => 'AdminController@playerFresh'
+            ]);
+    Route::post('admin/player', 'AdminController@playerExistingCreate');
 
 // Club Routes
 Route::get('club/{club_id}/{club_name}', 'ClubController@index')->where('club_id', '\d+');

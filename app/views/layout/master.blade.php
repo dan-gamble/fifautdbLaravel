@@ -83,6 +83,20 @@
 
     <hr class="dashed">
 
+    @if(Request::is('admin*'))
+        <div class="row">
+            <div class="large-12 columns">
+                <dl class="sub-nav">
+                <dt>Admin:</dt>
+                  <dd class="active"><a href="{{ URL::route('admin') }}">Home</a></dd>
+                  <dd><a href="{{ URL::route('admin.totw') }}">Create TOTW</a></dd>
+                  <dd><a href="{{ URL::route('admin.player') }}">Create Player</a></dd>
+                  <dd><a href="#">Suspended</a></dd>
+              </dl>
+            </div>
+        </div>
+    @endif
+
     @show
 
     @yield('content')

@@ -12,6 +12,14 @@
             {{Form::text('keyword', null, array('placeholder'=>'search by keyword', 'class' => 'class'))}}
         </div>
         {{Form::close()}}
+        @if (Request::isMethod('post'))
+            <ul class="large-block-grid-8">
+            @foreach ($playerBack as $player)
+                <li>
+                    <a href="{{ $player->url_str() }}">@include('layout.card-14')</a>
+                </li>
+            @endforeach
+        @endif
 	</div>
 </div>
 @stop
