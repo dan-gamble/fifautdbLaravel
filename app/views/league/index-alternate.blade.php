@@ -7,7 +7,7 @@
 @section('left-9')
 <h2>{{ $league->league_name_abbr15 }} Stats</h2>
 <hr>
-<ul class="large-block-grid-8 text-center stat-block-grid">
+<ul class="col-lg-block-grid-8 text-center stat-block-grid">
     <li>
         <h5>Players</h5>
         <p>{{ $league->player_count() }}</p>
@@ -45,7 +45,7 @@
     Players
 </h2>
 <hr>
-<ul class="large-block-grid-6">
+<ul class="col-lg-block-grid-6">
     @foreach ($players as $player)
     <li>
         <a href="{{ $player->url_str() }}">@include('layout.card-14')</a>
@@ -53,7 +53,7 @@
     @endforeach
 </ul>
 <div class="row ul-0">
-    <div class="large-5 columns">
+    <div class="col-lg-5 columns">
         {{ $players->appends(Input::except(array('page')))->links('layout.pagination') }}
     </div>
 </div>
@@ -62,7 +62,7 @@
 @section('right-3')
 <h2>Clubs</h2>
 <hr>
-<ul class="large-block-grid-2 text-center">
+<ul class="col-lg-block-grid-2 text-center">
     @foreach ($clubs as $club)
     <li>
         <a href="{{ $club->url_str() }}">

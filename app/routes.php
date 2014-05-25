@@ -15,7 +15,7 @@
 Route::get('/register', 'RegistrationController@create')->before('guest');
 Route::post('/register',
     [
-        'as' => 'registration.store',
+        'as'   => 'registration.store',
         'uses' => 'RegistrationController@store'
     ]);
 
@@ -50,20 +50,20 @@ Route::post('/', 'PagesController@indexPost');
 // Admin Routes
 Route::get('admin',
     [
-        'as' => 'admin',
+        'as'   => 'admin',
         'uses' => 'AdminController@index'
     ]);
     // Create TOTW
     Route::get('admin/totw',
         [
-            'as' =>'admin.totw',
+            'as'   =>'admin.totw',
             'uses' => 'AdminController@totw'
         ]);
     Route::post('admin/totw', 'AdminController@totwCreate');
     // Create Player
     Route::get('admin/player',
         [
-            'as' => 'admin.player',
+            'as'   => 'admin.player',
             'uses' => 'AdminController@player'
         ]);
         // Show list of existing players to create from
@@ -71,13 +71,13 @@ Route::get('admin',
             // Create player based on existing
             Route::get('admin/player/existing/{player_id}',
                 [
-                    'as' => 'admin.player.existing',
+                    'as'   => 'admin.player.existing',
                     'uses' => 'AdminController@playerExisting'
                 ]);
         // Create fresh Player
         Route::get('admin/player/fresh',
             [
-                'as' => 'admin.player.fresh',
+                'as'   => 'admin.player.fresh',
                 'uses' => 'AdminController@playerFresh'
             ]);
     Route::post('admin/player', 'AdminController@playerExistingCreate');
@@ -103,6 +103,14 @@ Route::get('player/search/results',
     [
         'as'   => 'playersearch.results',
         'uses' => 'PlayerController@searchResults'
+    ]);
+
+// Search Routes
+
+Route::get('search/player',
+    [
+        'as' => 'search.global.player',
+        'uses' => 'SearchController@searchPlayer'
     ]);
 
 // Squad Routes

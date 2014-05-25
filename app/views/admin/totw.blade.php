@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="row">
-	<div class="large-4 columns">
+	<div class="col-lg-4 columns">
 
 		<h3>TOTW</h3>
 		<hr>

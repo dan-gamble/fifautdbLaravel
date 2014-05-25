@@ -2,14 +2,14 @@
 
 @section('content')
 <div class="row">
-	<div class="large-12 columns">
+	<div class="col-lg-12 columns">
         <div class="row">
-			<div class="large-9 columns">
+			<div class="col-lg-9 columns">
 				<div class="row ul-0">
-					<div class="large-5 columns">
+					<div class="col-lg-5 columns">
                         {{ $players->appends(Input::except(array('page')))->links('layout.pagination') }}
 					</div>
-					<div class="large-5 large-offset-2 columns">
+					<div class="col-lg-5 col-lg-offset-2 columns">
 						<dl class="sub-nav right">
 							<dt>Filter:</dt>
 							<dd class="active"><a href="#">IF</a></dd>
@@ -18,14 +18,14 @@
 					</div>
 				</div>
 				<p>Let cards be draggable to a <code>#nav</code> 'shortlist' icon that can hold an maximum of 11 players (If the user tries to drag a 12th player in they can choose which player to replace). You can then do multiple functions with said players. Mainly start a squad builder with all players in the shortlist.</p>
-				<ul class="large-block-grid-6">
+				<ul class="col-lg-block-grid-6">
 					@foreach ($players as $player)
 					<li>
 						<a href="{{ $player->url_str() }}">@include('layout.card-14')</a>
 					</li>
 					@endforeach
 				</ul>
-                <table class="large-12">
+                <table class="col-lg-12">
                     <thead>
                         <tr>
                             <th>Player</th>
@@ -70,10 +70,10 @@
                     </tbody>
                 </table>
 				<div class="row ul-0">
-					<div class="large-5 columns">
+					<div class="col-lg-5 columns">
                         {{ $players->appends(Input::except(array('page')))->links('layout.pagination') }}
 					</div>
-					<div class="large-5 large-offset-2 columns">
+					<div class="col-lg-5 col-lg-offset-2 columns">
 						<dl class="sub-nav right">
                             <dt>Filter:</dt>
                             <dd class="active"><a href="#">IF</a></dd>
@@ -82,9 +82,9 @@
 					</div>
 				</div>
 			</div>
-            <div class="large-3 columns">
+            <div class="col-lg-3 columns">
                 {{ Form::open() }}
-                <div class="large-12">
+                <div class="col-lg-12">
                     <fieldset id="player-search-nation">
                         <legend>Nation</legend>
                         <ul class="list-unstyled list-h290">

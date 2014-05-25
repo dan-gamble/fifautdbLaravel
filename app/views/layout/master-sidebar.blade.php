@@ -3,15 +3,15 @@
 @section('before-content')
     @parent
     <div class="row">
-        <div class="large-9 columns">
+        <div class="main-content">
 
             @yield('left-9')
 
         </div>
-        <div class="large-3 columns">
+        <aside>
 
             @yield('right-3')
 
-        </div>
+        </aside>
     </div>
 @stop

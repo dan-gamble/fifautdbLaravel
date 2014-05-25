@@ -2,11 +2,11 @@
 
 @section('content')
 <div class="row">
-	<div class="large-12 columns">
+	<div class="col-lg-12 columns">
 		<div class="row">
-			<div class="large-12 columns">
+			<div class="col-lg-12 columns">
 				<div class="row ul-0">
-					<div class="large-5 columns">
+					<div class="col-lg-5 columns">
 						<ul class="pagination">
 							<li class="arrow unavailable"><a href="">&laquo;</a></li>
 							<li class="current"><a href="">1</a></li>
@@ -19,7 +19,7 @@
 							<li class="arrow"><a href="">&raquo;</a></li>
 						</ul>
 					</div>
-					<div class="large-5 large-offset-2 columns">
+					<div class="col-lg-5 col-lg-offset-2 columns">
 						<dl class="sub-nav right">
 							<dt>Filter:</dt>
 							<dd class="active"><a href="#">All</a></dd>
@@ -30,7 +30,7 @@
 					</div>
 				</div>
 				<p>Let cards be draggable to a <code>#nav</code> 'shortlist' icon that can hold an maximum of 11 players (If the user tries to drag a 12th player in they can choose which player to replace). You can then do multiple functions with said players. Mainly start a squad builder with all players in the shortlist.</p>
-				<ul class="large-block-grid-8">
+				<ul class="col-lg-block-grid-8">
 					@for ($i = 1; $i < 25; $i++)
 					<li class="card-container">
 						<a href="/player/player">
@@ -72,7 +72,7 @@
 					@endfor
 				</ul>
 				<div class="row ul-0">
-					<div class="large-5 columns">
+					<div class="col-lg-5 columns">
 						<ul class="pagination">
 							<li class="arrow unavailable"><a href="">&laquo;</a></li>
 							<li class="current"><a href="">1</a></li>
@@ -85,7 +85,7 @@
 							<li class="arrow"><a href="">&raquo;</a></li>
 						</ul>
 					</div>
-					<div class="large-5 large-offset-2 columns">
+					<div class="col-lg-5 col-lg-offset-2 columns">
 						<dl class="sub-nav right">
 							<dt>Filter:</dt>
 							<dd class="active"><a href="#">All</a></dd>

@@ -4,7 +4,7 @@
 
 @if (Request::isMethod('get'))
 	<div class="row">
-		<div class="large-6 columns">
+		<div class="col-lg-6 columns">
 
 			@if (Session::has('flash_message'))
 
@@ -24,7 +24,7 @@
 				{{ Form::submit("Le'go!", ['class' => 'small button' ]) }}
 			{{ Form::close() }}
 		</div>
-		<div class="large-6 columns">
+		<div class="col-lg-6 columns">
 			<h3>Create fresh Player</h3>
 			<hr>
 

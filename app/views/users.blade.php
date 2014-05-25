@@ -2,19 +2,19 @@
 
 @section('content')
 <div class="row">
-	<div class="large-12 columns">
+	<div class="col-lg-12 columns">
 		<div class="panel">
 			<h3>We&rsquo;re stoked you want to try Foundation! </h3>
 			<p>To get going, this file (index.html) includes some basic styles you can modify, play around with, or totally destroy to get going.</p>
 			<p>Once you've exhausted the fun in this document, you should check out:</p>
 			<div class="row">
-				<div class="large-4 medium-4 columns">
+				<div class="col-lg-4 medium-4 columns">
 					<p><a href="http://foundation.zurb.com/docs">Foundation Documentation</a><br />Everything you need to know about using the framework.</p>
 				</div>
-				<div class="large-4 medium-4 columns">
+				<div class="col-lg-4 medium-4 columns">
 					<p><a href="http://github.com/zurb/foundation">Foundation on Github</a><br />Latest code, issue reports, feature requests and more.</p>
 				</div>
-				<div class="large-4 medium-4 columns">
+				<div class="col-lg-4 medium-4 columns">
 					<p><a href="http://twitter.com/foundationzurb">@foundationzurb</a><br />Ping us on Twitter if you have questions. If you build something with this we'd love to see it (and send you a totally boss sticker).</p>
 				</div>
 			</div>
@@ -23,41 +23,41 @@
 </div>
 
 <div class="row">
-	<div class="large-8 medium-8 columns">
+	<div class="col-lg-8 medium-8 columns">
 		<h5>Here&rsquo;s your basic grid:</h5>
 		<!-- Grid Example -->
 
 		<div class="row">
-			<div class="large-12 columns">
+			<div class="col-lg-12 columns">
 				<div class="callout panel">
 					<p><strong>This is a twelve column section in a row.</strong> Each of these includes a div.panel element so you can see where the columns are - it's not required at all for the grid.</p>
 				</div>
 			</div>
 		</div>
 		<div class="row">
-			<div class="large-6 medium-6 columns">
+			<div class="col-lg-6 medium-6 columns">
 				<div class="callout panel">
 					<p>Six columns</p>
 				</div>
 			</div>
-			<div class="large-6 medium-6 columns">
+			<div class="col-lg-6 medium-6 columns">
 				<div class="callout panel">
 					<p>Six columns</p>
 				</div>
 			</div>
 		</div>
 		<div class="row">
-			<div class="large-4 medium-4 small-4 columns">
+			<div class="col-lg-4 medium-4 small-4 columns">
 				<div class="callout panel">
 					<p>Four columns</p>
 				</div>
 			</div>
-			<div class="large-4 medium-4 small-4 columns">
+			<div class="col-lg-4 medium-4 small-4 columns">
 				<div class="callout panel">
 					<p>Four columns</p>
 				</div>
 			</div>
-			<div class="large-4 medium-4 small-4 columns">
+			<div class="col-lg-4 medium-4 small-4 columns">
 				<div class="callout panel">
 					<p>Four columns</p>
 				</div>
@@ -69,21 +69,21 @@
 		<h5>We bet you&rsquo;ll need a form somewhere:</h5>
 		<form>
 			<div class="row">
-				<div class="large-12 columns">
+				<div class="col-lg-12 columns">
 					<label>Input Label</label>
-					<input type="text" placeholder="large-12.columns" />
+					<input type="text" placeholder="col-lg-12.columns" />
 				</div>
 			</div>
 			<div class="row">
-				<div class="large-4 medium-4 columns">
+				<div class="col-lg-4 medium-4 columns">
 					<label>Input Label</label>
-					<input type="text" placeholder="large-4.columns" />
+					<input type="text" placeholder="col-lg-4.columns" />
 				</div>
-				<div class="large-4 medium-4 columns">
+				<div class="col-lg-4 medium-4 columns">
 					<label>Input Label</label>
-					<input type="text" placeholder="large-4.columns" />
+					<input type="text" placeholder="col-lg-4.columns" />
 				</div>
-				<div class="large-4 medium-4 columns">
+				<div class="col-lg-4 medium-4 columns">
 					<div class="row collapse">
 						<label>Input Label</label>
 						<div class="small-9 columns">
@@ -96,7 +96,7 @@
 				</div>
 			</div>
 			<div class="row">
-				<div class="large-12 columns">
+				<div class="col-lg-12 columns">
 					<label>Select Box</label>
 					<select>
 						<option value="husker">Husker</option>
@@ -107,19 +107,19 @@
 				</div>
 			</div>
 			<div class="row">
-				<div class="large-6 medium-6 columns">
+				<div class="col-lg-6 medium-6 columns">
 					<label>Choose Your Favorite</label>
 					<input type="radio" name="pokemon" value="Red" id="pokemonRed"><label for="pokemonRed">Radio 1</label>
 					<input type="radio" name="pokemon" value="Blue" id="pokemonBlue"><label for="pokemonBlue">Radio 2</label>
 				</div>
-				<div class="large-6 medium-6 columns">
+				<div class="col-lg-6 medium-6 columns">
 					<label>Check these out</label>
 					<input id="checkbox1" type="checkbox"><label for="checkbox1">Checkbox 1</label>
 					<input id="checkbox2" type="checkbox"><label for="checkbox2">Checkbox 2</label>
 				</div>
 			</div>
 			<div class="row">
-				<div class="large-12 columns">
+				<div class="col-lg-12 columns">
 					<label>Textarea Label</label>
 					<textarea placeholder="small-12.columns"></textarea>
 				</div>
@@ -127,7 +127,7 @@
 		</form>
 	</div>
 
-	<div class="large-4 medium-4 columns">
+	<div class="col-lg-4 medium-4 columns">
 		<h5>Try one of these buttons:</h5>
 		<p>
 			<a href="#" class="small button">Simple Button</a><br/>

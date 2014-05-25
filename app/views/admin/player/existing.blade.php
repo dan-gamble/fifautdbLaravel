@@ -7,9 +7,9 @@
 @section('content')
 <div class="row">
     {{ Form::open(['action' => 'AdminController@playerExistingCreate']) }}
-    <div class="large-7 columns">
+    <div class="col-lg-7 columns">
         <div class="row">
-            <div class="large-4 columns">
+            <div class="col-lg-4 columns">
                 <h4>{{ $player->common_name }}</h4>
                 <hr>
                 @include('layout.card-14')
@@ -22,18 +22,18 @@
                     {{ Form::text('common_name', $player->common_name) }}
                 </div>
             </div>
-            <div class="large-8 columns">
+            <div class="col-lg-8 columns">
                 <h4>Card Stats</h4>
                 <hr>
                 <div class="row">
-                    <div class="large-6 columns">
+                    <div class="col-lg-6 columns">
                         <ul class="list-unstyled list-player-stats list-striped">
                             {{ $player->attr_admin('Card Att1', 'Pace') }}
                             {{ $player->attr_admin('Card Att2', 'Shooting') }}
                             {{ $player->attr_admin('Card Att3', 'Passing') }}
                         </ul>
                     </div>
-                    <div class="large-6 columns">
+                    <div class="col-lg-6 columns">
                         <ul class="list-unstyled list-player-stats list-striped">
                             {{ $player->attr_admin('Card Att4', 'Dribbling') }}
                             {{ $player->attr_admin('Card Att5', 'Defending') }}
@@ -44,7 +44,7 @@
                 <h4>Card Attributes</h4>
                 <hr>
                 <div class="row">
-                    <div class="large-6 columns">
+                    <div class="col-lg-6 columns">
                         <ul class="list-unstyled list-player-stats list-striped">
                             {{ $player->attr_admin('Overall Rating') }}
                             <li>Card Type {{ Form::select('card_type', ['0' => 'Non Rare', '1' => 'Rare', '2' => 'IF', '3' => 'TOTS', '12' => 'Legend'], $player->card_type, ['class' => 'right existing-player-input']) }}</li>
@@ -52,7 +52,7 @@
                             <li>Card Set {{ Form::text('item_type', $player->item_type, ['class' => 'right existing-player-input']) }}</li>
                         </ul>
                     </div>
-                    <div class="large-6 columns">
+                    <div class="col-lg-6 columns">
                         <ul class="list-unstyled list-player-stats list-striped">
                             <li>Position {{ Form::select('role', $role, $player->role, ['class' => 'right existing-player-input']) }}</li>
                             <li>Shirt Number {{ Form::selectRange('shirt_number', 1, 99, $player->shirt_number, ['class' => 'right existing-player-input']) }}</li>
@@ -63,7 +63,7 @@
                 <h4>Skill Stats</h4>
                 <hr>
                 <div class="row">
-                    <div class="large-6 columns">
+                    <div class="col-lg-6 columns">
                         <ul class="list-unstyled list-player-stats list-striped">
                             {{ $player->attr_admin('Ball Control') }}
                             {{ $player->attr_admin('Curve') }}
@@ -75,7 +75,7 @@
                             {{ $player->attr_admin('Standing Tackle') }}
                         </ul>
                     </div>
-                    <div class="large-6 columns">
+                    <div class="col-lg-6 columns">
                         <ul class="list-unstyled list-player-stats list-striped">
                             {{ $player->attr_admin('Crossing') }}
                             {{ $player->attr_admin('Dribbling') }}
@@ -91,13 +91,13 @@
                 <h4>Mental Stats</h4>
                 <hr>
                 <div class="row">
-                    <div class="large-6 columns">
+                    <div class="col-lg-6 columns">
                         <ul class="list-unstyled list-player-stats list-striped">
                             {{ $player->attr_admin('Aggression') }}
                             {{ $player->attr_admin('Interceptions') }}
                         </ul>
                     </div>
-                    <div class="large-6 columns">
+                    <div class="col-lg-6 columns">
                         <ul class="list-unstyled list-player-stats list-striped">
                             {{ $player->attr_admin('Positioning') }}
                             {{ $player->attr_admin('Vision') }}
@@ -107,7 +107,7 @@
                 <h4>Physical Stats</h4>
                 <hr>
                 <div class="row">
-                    <div class="large-6 columns">
+                    <div class="col-lg-6 columns">
                         <ul class="list-unstyled list-player-stats list-striped">
                             {{ $player->attr_admin('Acceleration') }}
                             {{ $player->attr_admin('Balance') }}
@@ -115,7 +115,7 @@
                             {{ $player->attr_admin('Strength') }}
                         </ul>
                     </div>
-                    <div class="large-6 columns">
+                    <div class="col-lg-6 columns">
                         <ul class="list-unstyled list-player-stats list-striped">
                             {{ $player->attr_admin('Agility') }}
                             {{ $player->attr_admin('Jumping') }}
@@ -127,14 +127,14 @@
                 <h4>Goalkeeper Stats</h4>
                 <hr>
                 <div class="row">
-                    <div class="large-6 columns">
+                    <div class="col-lg-6 columns">
                         <ul class="list-unstyled list-player-stats list-striped">
                             {{ $player->attr_admin('GK Diving') }}
                             {{ $player->attr_admin('GK Kicking') }}
                             {{ $player->attr_admin('GK Positioning') }}
                         </ul>
                     </div>
-                    <div class="large-6 columns">
+                    <div class="col-lg-6 columns">
                         <ul class="list-unstyled list-player-stats list-striped">
                             {{ $player->attr_admin('GK Handling') }}
                             {{ $player->attr_admin('GK Reflexes') }}
@@ -144,7 +144,7 @@
             </div>
         </div>
     </div>
-    <div class="large-5 columns">
+    <div class="col-lg-5 columns">
         <h4>{{ $player->common_name }} Stats</h4>
         <hr>
         <table class="table table-striped">
@@ -162,23 +162,23 @@
             </tr>
             <tr>
                 <td>Club</td>
-                <td>{{ Form::select('club', $club, $player->club_id) }}</td>
+                <td>{{ Form::select('club_id', $club, $player->club_id) }}</td>
             </tr>
             <tr>
                 <td>League</td>
-                <td>{{ Form::select('league', $league, $player->league_id) }}</td>
+                <td>{{ Form::select('league_id', $league, $player->league_id) }}</td>
             </tr>
             <tr>
                 <td>Nationality</td>
-                <td>{{ Form::select('nation', $nation, $player->nation_id) }}</td>
+                <td>{{ Form::select('nation_id', $nation, $player->nation_id) }}</td>
             </tr>
             <tr>
                 <td>Date of Birth</td>
                 <td>
                     <div class="row">
-                        <div class="large-4 columns">{{ Form::selectRange('day', 1, 31, substr($player->dob, -2)) }}</div>
-                        <div class="large-4 columns">{{ Form::selectMonth('month', substr($player->dob, -5, 2)) }}</div>
-                        <div class="large-4 columns">{{ Form::selectRange('year', 1900, 2014, substr($player->dob, 0, 4)) }}</div>
+                        <div class="col-lg-4 columns">{{ Form::selectRange('day', 1, 31, substr($player->dob, -2)) }}</div>
+                        <div class="col-lg-4 columns">{{ Form::selectMonth('month', substr($player->dob, -5, 2)) }}</div>
+                        <div class="col-lg-4 columns">{{ Form::selectRange('year', 1900, 2014, substr($player->dob, 0, 4)) }}</div>
                     </div>
                 </td>
             </tr>
@@ -226,7 +226,7 @@
             </tr>
         </table>
     </div>
-    <div class="large-12 columns">
+    <div class="col-lg-12 columns">
         {{ Form::submit("Le'go!", ['class' => 'small button' ]) }}
     </div>
     {{ Form::close() }}

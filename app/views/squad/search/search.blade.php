@@ -2,13 +2,13 @@
 
 @section('content')
 <div class="row">
-	<div class="large-12 columns">
+	<div class="col-lg-12 columns">
 		<form id="player-search">
 			<div class="row">
-				<div class="large-6 columns">
+				<div class="col-lg-6 columns">
 					<fieldset id="player-search-nation">
 						<legend>Including {{ $name }}</legend>
-						<div class="large-8 columns">
+						<div class="col-lg-8 columns">
 							<div class="search-input">
 								<i class="fa fa-search fa-2x"></i> <input type="text" placeholder="Player search" id="tags">
 								<!-- <p>Nation search will throw up auto completes. If a nation is selected through the search it will get auto checked on the right.</p>
@@ -31,7 +31,7 @@
 								});
 							</script>
 						</div>
-						<div class="large-4 columns">
+						<div class="col-lg-4 columns">
 							<ul class="list-unstyled list-h290">
 								@for ($i = 1; $i < 3; $i++)
 								<li><input id="checkbox1" type="checkbox" checked><label for="checkbox1">Nation Selected {{ $i }}</label></li>
@@ -44,11 +44,11 @@
 						</div>
 					</fieldset>
 				</div>
-				<div class="large-3 columns">
+				<div class="col-lg-3 columns">
 					<fieldset>
 						<legend>Prices</legend>
 						<div class="row">
-							<div class="large-12 columns">
+							<div class="col-lg-12 columns">
 								<label>Console</label>
 								<div class="row collapse">
 									<div class="small-12 columns">
@@ -61,7 +61,7 @@
 								</div>
 							</div>
 							<label class="columns">Price</label>
-							<div class="large-6 columns">
+							<div class="col-lg-6 columns">
 								<div class="row collapse">
 									<div class="small-8 columns">
 										<input type="text" placeholder="0">
@@ -71,7 +71,7 @@
 									</div>
 								</div>
 							</div>
-							<div class="large-6 columns">
+							<div class="col-lg-6 columns">
 								<div class="row collapse">
 									<div class="small-8 columns">
 										<input type="text" placeholder="0">
@@ -84,11 +84,11 @@
 						</div>
 					</fieldset>
 				</div>
-				<div class="large-3 columns">
+				<div class="col-lg-3 columns">
 					<fieldset>
 						<legend>Prices</legend>
 						<div class="row">
-							<div class="large-12 columns">
+							<div class="col-lg-12 columns">
 								<label>Console</label>
 								<div class="row collapse">
 									<div class="small-12 columns">
@@ -101,7 +101,7 @@
 								</div>
 							</div>
 							<label class="columns">Price</label>
-							<div class="large-6 columns">
+							<div class="col-lg-6 columns">
 								<div class="row collapse">
 									<div class="small-8 columns">
 										<input type="text" placeholder="0">
@@ -111,7 +111,7 @@
 									</div>
 								</div>
 							</div>
-							<div class="large-6 columns">
+							<div class="col-lg-6 columns">
 								<div class="row collapse">
 									<div class="small-8 columns">
 										<input type="text" placeholder="0">
@@ -126,12 +126,12 @@
 				</div>
 			</div>
 			<div class="row">
-				<div class="large-3 columns">
+				<div class="col-lg-3 columns">
 					<fieldset>
 						<legend>Rating / Chemistry</legend>
 						<div class="row">
 						<label class="columns" for="minrating">Rating</label>
-							<div class="large-6 columns">
+							<div class="col-lg-6 columns">
 								<div class="row collapse">
 									<div class="small-8 columns">
 										<select id="minrating">
@@ -145,7 +145,7 @@
 									</div>
 								</div>
 							</div>
-							<div class="large-6 columns">
+							<div class="col-lg-6 columns">
 								<div class="row collapse">
 									<div class="small-8 columns">
 										<select>
@@ -160,7 +160,7 @@
 								</div>
 							</div>
 							<label class="columns" for="minchemistry">Chemistry</label>
-							<div class="large-6 columns">
+							<div class="col-lg-6 columns">
 								<div class="row collapse">
 									<div class="small-8 columns">
 										<select id="minchemistry">
@@ -174,7 +174,7 @@
 									</div>
 								</div>
 							</div>
-							<div class="large-6 columns">
+							<div class="col-lg-6 columns">
 								<div class="row collapse">
 									<div class="small-8 columns">
 										<select>
@@ -191,12 +191,12 @@
 						</div>
 					</fieldset>
 				</div>
-				<div class="large-3 columns">
+				<div class="col-lg-3 columns">
 					<fieldset>
 						<legend>Skill Moves / Weak Foot</legend>
 						<div class="row">
 						<label class="columns" for="minskillmoves">Skill Moves</label>
-							<div class="large-6 columns">
+							<div class="col-lg-6 columns">
 								<div class="row collapse">
 									<div class="small-8 columns">
 										<select id="minskillmoves">
@@ -210,7 +210,7 @@
 									</div>
 								</div>
 							</div>
-							<div class="large-6 columns">
+							<div class="col-lg-6 columns">
 								<div class="row collapse">
 									<div class="small-8 columns">
 										<select id="maxskillmoves">
@@ -227,7 +227,7 @@
 						</div>
 						<div class="row">
 							<label class="columns" for="minweakfoot">Weak Foot</label>
-							<div class="large-6 columns">
+							<div class="col-lg-6 columns">
 								<div class="row collapse">
 									<div class="small-8 columns">
 										<select id="minweakfoot">
@@ -241,7 +241,7 @@
 									</div>
 								</div>
 							</div>
-							<div class="large-6 columns">
+							<div class="col-lg-6 columns">
 								<div class="row collapse">
 									<div class="small-8 columns">
 										<select id="maxweakfoot">
@@ -258,12 +258,12 @@
 						</div>
 					</fieldset>
 				</div>
-				<div class="large-3 columns">
+				<div class="col-lg-3 columns">
 					<fieldset>
 						<legend>Workrates / Preferred Foot</legend>
 						<div class="row">
 						<label class="columns">Workrates</label>
-							<div class="large-6 columns">
+							<div class="col-lg-6 columns">
 								<div class="row collapse">
 									<div class="small-8 columns">
 										<select>
@@ -277,7 +277,7 @@
 									</div>
 								</div>
 							</div>
-							<div class="large-6 columns">
+							<div class="col-lg-6 columns">
 								<div class="row collapse">
 									<div class="small-8 columns">
 										<select>
@@ -291,7 +291,7 @@
 									</div>
 								</div>
 							</div>
-							<div class="large-12 columns">
+							<div class="col-lg-12 columns">
 								<label>Preferred Foot</label>
 								<div class="row collapse">
 									<div class="small-12 columns">
@@ -305,11 +305,11 @@
 						</div>
 					</fieldset>
 				</div>
-				<div class="large-3 columns">
+				<div class="col-lg-3 columns">
 					<fieldset>
 						<legend>Prices</legend>
 						<div class="row">
-							<div class="large-12 columns">
+							<div class="col-lg-12 columns">
 								<label>Console</label>
 								<div class="row collapse">
 									<div class="small-12 columns">
@@ -322,7 +322,7 @@
 								</div>
 							</div>
 							<label class="columns">Price</label>
-							<div class="large-6 columns">
+							<div class="col-lg-6 columns">
 								<div class="row collapse">
 									<div class="small-8 columns">
 										<input type="text" placeholder="0">
@@ -332,7 +332,7 @@
 									</div>
 								</div>
 							</div>
-							<div class="large-6 columns">
+							<div class="col-lg-6 columns">
 								<div class="row collapse">
 									<div class="small-8 columns">
 										<input type="text" placeholder="0">
@@ -347,7 +347,7 @@
 				</div>
 			</div>
 			<div class="row">
-				<div class="large-6 columns">
+				<div class="col-lg-6 columns">
 					<fieldset id="player-search-pos">
 						<legend>Position</legend>
 						<ul class="small-block-grid-4 list-unstyled list-checkboxes">
@@ -409,13 +409,13 @@
 						$('#right-back').checkboxMaster('input[name=right-back]');
 					</script>
 				</div>
-				<div class="large-6 columns">
+				<div class="col-lg-6 columns">
 					<fieldset>
 						<legend>Additional</legend>
 						<div class="row">
-							<div class="large-6 columns">
+							<div class="col-lg-6 columns">
 								<label class="columns">Age</label>
-								<div class="large-6 columns">
+								<div class="col-lg-6 columns">
 									<div class="row collapse">
 										<div class="small-8 columns">
 											<select>
@@ -429,7 +429,7 @@
 										</div>
 									</div>
 								</div>
-								<div class="large-6 columns">
+								<div class="col-lg-6 columns">
 									<div class="row collapse">
 										<div class="small-8 columns">
 											<select>
@@ -444,9 +444,9 @@
 									</div>
 								</div>
 							</div>
-							<div class="large-6 columns">
+							<div class="col-lg-6 columns">
 								<label class="columns">Age</label>
-								<div class="large-6 columns">
+								<div class="col-lg-6 columns">
 									<div class="row collapse">
 										<div class="small-8 columns">
 											<select>
@@ -460,7 +460,7 @@
 										</div>
 									</div>
 								</div>
-								<div class="large-6 columns">
+								<div class="col-lg-6 columns">
 									<div class="row collapse">
 										<div class="small-8 columns">
 											<select>
@@ -475,9 +475,9 @@
 									</div>
 								</div>
 							</div>
-							<div class="large-6 columns">
+							<div class="col-lg-6 columns">
 								<label class="columns">Height</label>
-								<div class="large-6 columns">
+								<div class="col-lg-6 columns">
 									<div class="row collapse">
 										<div class="small-8 columns">
 											<select>
@@ -491,7 +491,7 @@
 										</div>
 									</div>
 								</div>
-								<div class="large-6 columns">
+								<div class="col-lg-6 columns">
 									<div class="row collapse">
 										<div class="small-8 columns">
 											<select>
@@ -506,9 +506,9 @@
 									</div>
 								</div>
 							</div>
-							<div class="large-6 columns">
+							<div class="col-lg-6 columns">
 								<label class="columns">Weight</label>
-								<div class="large-6 columns">
+								<div class="col-lg-6 columns">
 									<div class="row collapse">
 										<div class="small-8 columns">
 											<select>
@@ -522,7 +522,7 @@
 										</div>
 									</div>
 								</div>
-								<div class="large-6 columns">
+								<div class="col-lg-6 columns">
 									<div class="row collapse">
 										<div class="small-8 columns">
 											<select>
@@ -542,7 +542,7 @@
 				</div>
 			</div>
 			<div class="row">
-				<div class="large-12 columns">
+				<div class="col-lg-12 columns">
 					<ul class="button-group">
 						<li>
 							<a href="/player/search/results" class="small button">Search</a>

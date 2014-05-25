@@ -46,13 +46,13 @@
 	</div> -->
 	<div id="content">
 		<div class="row">
-			<div class="large-4 columns">
+			<div class="col-lg-4 columns">
 				<div class="search-input">
 					<i class="fa fa-search fa-2x"></i> <input type="text" placeholder="Player search" id="tags">
 				</div>
 				<h1>Page headerings</h1>
 			</div>
-			<div class="large-8 columns">
+			<div class="col-lg-8 columns">
 				<img class="right" src="http://placehold.it/728x90">
 			</div>
 		</div>
@@ -64,7 +64,7 @@
 		<hr class="dashed">
 
 		<div class="row">
-			<div class="large-12 columns">
+			<div class="col-lg-12 columns">
 				<img class="right" src="http://placehold.it/728x90">
 			</div>
 		</div>

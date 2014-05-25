@@ -7,7 +7,7 @@
 @section('left-9')
 <h3>Players</h3>
 <hr>
-<ul class="large-block-grid-6">
+<ul class="block-grid-md-6">
     @foreach ($players as $player)
     <li>
         <a href="{{ $player->url_str() }}">@include('layout.card-14')</a>
@@ -19,8 +19,8 @@
 @section('right-3')
 <h3>Club</h3>
 <hr>
-@include('layout.ads.ad-300-side')
-<table class="large-12">
+@include('layout.ads.ad-side')
+<table class="col-lg-12">
     <tr>
         <td>Players</td>
         <td>{{ $club->player_count() }}</td>
@@ -56,7 +56,7 @@
 </table>
 <h3>Kits</h3>
 <hr>
-<ul class="large-block-grid-2 text-center">
+<ul class="col-lg-block-grid-2 text-center">
     <li>
         <img class="club-card-shirt" src="/assets/img/kits/{{ $club->asset_id }}_0.png">
         <h4>Home</h4>
@@ -66,7 +66,7 @@
         <h4>Away</h4>
     </li>
 </ul>
-<ul class="large-block-grid-1 text-center">
+<ul class="col-lg-block-grid-1 text-center">
     <li>
         <img class="club-card-shirt" src="/assets/img/kits/{{ $club->asset_id }}_3.png">
         <h4>3rd Kit</h4>

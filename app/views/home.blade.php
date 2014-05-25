@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="row">
-	<div class="large-12 columns">
+	<div class="col-lg-12 columns">
         <h3>h3. Bootstrap heading</h3>
         <hr>
         <p>{{ Auth::check() ? "Welcome, " . Auth::user()->username : "Why don't you sign up?" }}</p>
@@ -13,7 +13,7 @@
         </div>
         {{Form::close()}}
         @if (Request::isMethod('post'))
-            <ul class="large-block-grid-8">
+            <ul class="col-lg-block-grid-8">
             @foreach ($playerBack as $player)
                 <li>
                     <a href="{{ $player->url_str() }}">@include('layout.card-14')</a>

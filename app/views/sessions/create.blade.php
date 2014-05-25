@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="row">
-        <div class="large-12 columns">
+        <div class="col-lg-12 columns">
             <h1>Log In</h1>
             {{ Form::open(['route' => 'sessions.store']) }}
 

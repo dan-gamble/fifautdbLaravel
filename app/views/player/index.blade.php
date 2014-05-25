@@ -6,18 +6,18 @@
 
 @section('content')
 <div class="row">
-	<div class="large-7 columns">
+	<div class="col-lg-7 columns">
         <div class="row">
-            <div class="large-4 columns">
+            <div class="col-lg-4 columns">
                 <h4>{{ $player->common_name }}</h4>
                 <hr>
                 @include('layout.card-14')
             </div>
-            <div class="large-8 columns">
+            <div class="col-lg-8 columns">
                 <h4>Skill Stats</h4>
                 <hr>
                 <div class="row">
-                    <div class="large-6 columns">
+                    <div class="col-lg-6 columns">
                         <ul class="list-unstyled list-player-stats list-striped">
                             {{ $player->attr_profile('Ball Control') }}
                             {{ $player->attr_profile('Curve') }}
@@ -29,7 +29,7 @@
                             {{ $player->attr_profile('Standing Tackle') }}
                         </ul>
                     </div>
-                    <div class="large-6 columns">
+                    <div class="col-lg-6 columns">
                         <ul class="list-unstyled list-player-stats list-striped">
                             {{ $player->attr_profile('Crossing') }}
                             {{ $player->attr_profile('Dribbling') }}
@@ -45,13 +45,13 @@
                 <h4>Mental Stats</h4>
                 <hr>
                 <div class="row">
-                    <div class="large-6 columns">
+                    <div class="col-lg-6 columns">
                         <ul class="list-unstyled list-player-stats list-striped">
                             {{ $player->attr_profile('Aggression') }}
                             {{ $player->attr_profile('Interceptions') }}
                         </ul>
                     </div>
-                    <div class="large-6 columns">
+                    <div class="col-lg-6 columns">
                         <ul class="list-unstyled list-player-stats list-striped">
                             {{ $player->attr_profile('Positioning') }}
                             {{ $player->attr_profile('Vision') }}
@@ -61,7 +61,7 @@
                 <h4>Physical Stats</h4>
                 <hr>
                 <div class="row">
-                    <div class="large-6 columns">
+                    <div class="col-lg-6 columns">
                         <ul class="list-unstyled list-player-stats list-striped">
                             {{ $player->attr_profile('Acceleration') }}
                             {{ $player->attr_profile('Balance') }}
@@ -69,7 +69,7 @@
                             {{ $player->attr_profile('Strength') }}
                         </ul>
                     </div>
-                    <div class="large-6 columns">
+                    <div class="col-lg-6 columns">
                         <ul class="list-unstyled list-player-stats list-striped">
                             {{ $player->attr_profile('Agility') }}
                             {{ $player->attr_profile('Jumping') }}
@@ -81,7 +81,7 @@
             </div>
         </div>
 	</div>
-	<div class="large-5 columns">
+	<div class="col-lg-5 columns">
         <h4>{{ $player->common_name }} Stats</h4>
         <hr>
         <table class="table table-striped">
@@ -159,9 +159,9 @@
 	</div>
 </div>
 <div class="row">
-    <div class="large-12 mt-10 columns">
+    <div class="col-lg-12 mt-10 columns">
         <div class="row">
-            <div class="large-6 columns">
+            <div class="col-lg-6 columns">
                 <h4>Comments</h4>
                 @if (Auth::guest())
                 <p>Please <a href="/login">Log in</a> to comment</p>
@@ -183,14 +183,14 @@
         </div>
         @foreach ($comments as $comment)
         <article class="row">
-            <section class="author-info large-2 columns text-center">
+            <section class="author-info col-lg-2 columns text-center">
                 <h5><a href="#">{{ $comment->user->username }}</a></h5>
                 <img src="http://placehold.it/100x100" alt="">
                 <p>Site Admin</p>
                 <p>123 comments</p>
                 <p><strong>47.2</strong> Points Ratio</p>
             </section>
-            <section class="comment-body large-10 columns">
+            <section class="comment-body col-lg-10 columns">
                 <header class="clearfix">
                     <section class="left">[ <strong>-</strong> ]</section>
                     <section class="right">Posted {{ $comment->dateTime() }}</section>
@@ -212,7 +212,7 @@
             </section>
         </article>
         <article class="row comment-child">
-            <section class="author-info large-2 columns text-center">
+            <section class="author-info col-lg-2 columns text-center">
                 <h1>{{ $comment->comment_parent_id }}</h1>
                 <h5><a href="#">{{ $comment->user->username }} </a></h5>
                 <img src="http://placehold.it/100x100" alt="">
@@ -220,7 +220,7 @@
                 <p>123 comments</p>
                 <p><strong>47.2</strong> Points Ratio</p>
             </section>
-            <section class="comment-body large-10 columns">
+            <section class="comment-body col-lg-10 columns">
                 <header class="clearfix">
                     <section class="left">[ <strong>-</strong> ]</section>
                     <section class="right">Posted {{ $comment->dateTime() }}</section>
@@ -251,10 +251,10 @@
         </article>
         <article class="row comment-child">
             <div class="clearfix">
-                <section class="author-info large-2 columns text-center">
+                <section class="author-info col-lg-2 columns text-center">
                     <a href="#">{{ $comment->user->username }}</a>
                 </section>
-                <section class="comment-body large-10 columns">
+                <section class="comment-body col-lg-10 columns">
                     <header class="clearfix">
                         <section class="left">[ <strong>+</strong> ]</section>
                         <section class="right">Posted {{ $comment->dateTime() }}</section>

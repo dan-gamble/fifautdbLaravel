@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="row">
-	<div class="large-12 columns">
+	<div class="col-lg-12 columns">
 		<div class="builder left">
 			<ul class="builder-formation formation-442">
 				<li class="pos-gk">GK</li>

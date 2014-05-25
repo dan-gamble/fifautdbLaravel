@@ -6,15 +6,15 @@ Player Search
 
 @section('content')
 <div class="row">
-	<div class="large-12 columns">
+	<div class="col-lg-12 columns">
 		{{ Form::open(['route' => 'playersearch.results', 'method' => 'get']) }}
         <div class="row">
-            <div class="large-3 columns">
+            <div class="col-lg-3 columns">
                 <fieldset>
                     <legend>Rating / Card Type</legend>
                     <div class="row">
                         <label class="columns" for="minrating">Rating</label>
-                        <div class="large-6 columns">
+                        <div class="col-lg-6 columns">
                             <div class="row collapse">
                                 <div class="small-8 columns">
                                     {{ Form::selectRange('minrating', 1, 99) }}
@@ -24,7 +24,7 @@ Player Search
                                 </div>
                             </div>
                         </div>
-                        <div class="large-6 columns">
+                        <div class="col-lg-6 columns">
                             <div class="row collapse">
                                 <div class="small-8 columns">
                                     {{ Form::selectRange('maxrating', 99, 1) }}
@@ -34,7 +34,7 @@ Player Search
                                 </div>
                             </div>
                         </div>
-                        <div class="large-12 columns">
+                        <div class="col-lg-12 columns">
                             <label for="cardtype">Card Types</label>
                             <div class="row collapse">
                                 <div class="small-12 columns">
@@ -49,12 +49,12 @@ Player Search
                     </div>
                 </fieldset>
             </div>
-            <div class="large-3 columns">
+            <div class="col-lg-3 columns">
                 <fieldset>
                     <legend>Skill Moves / Weak Foot</legend>
                     <div class="row">
                         <label class="columns" for="minskillmoves">Skill Moves</label>
-                        <div class="large-6 columns">
+                        <div class="col-lg-6 columns">
                             <div class="row collapse">
                                 <div class="small-8 columns">
                                     {{ Form::selectRange('minskill', 1, 5) }}
@@ -64,7 +64,7 @@ Player Search
                                 </div>
                             </div>
                         </div>
-                        <div class="large-6 columns">
+                        <div class="col-lg-6 columns">
                             <div class="row collapse">
                                 <div class="small-8 columns">
                                     {{ Form::selectRange('maxskill', 5, 1) }}
@@ -77,7 +77,7 @@ Player Search
                     </div>
                     <div class="row">
                         <label class="columns" for="minweakfoot">Weak Foot</label>
-                        <div class="large-6 columns">
+                        <div class="col-lg-6 columns">
                             <div class="row collapse">
                                 <div class="small-8 columns">
                                     {{ Form::selectRange('minweak', 1, 5) }}
@@ -87,7 +87,7 @@ Player Search
                                 </div>
                             </div>
                         </div>
-                        <div class="large-6 columns">
+                        <div class="col-lg-6 columns">
                             <div class="row collapse">
                                 <div class="small-8 columns">
                                     {{ Form::selectRange('maxweak', 5, 1) }}
@@ -100,12 +100,12 @@ Player Search
                     </div>
                 </fieldset>
             </div>
-            <div class="large-3 columns">
+            <div class="col-lg-3 columns">
                 <fieldset>
                     <legend>Workrates / Preferred Foot</legend>
                     <div class="row">
                         <label class="columns">Workrates</label>
-                        <div class="large-6 columns">
+                        <div class="col-lg-6 columns">
                             <div class="row collapse">
                                 <div class="small-8 columns">
                                     {{ Form::select('defrates', array('' => '', '1' => 'Low', '0' => 'Medium', '2' => 'High'), '') }}
@@ -115,7 +115,7 @@ Player Search
                                 </div>
                             </div>
                         </div>
-                        <div class="large-6 columns">
+                        <div class="col-lg-6 columns">
                             <div class="row collapse">
                                 <div class="small-8 columns">
                                     {{ Form::select('attrates', array('' => '', '1' => 'Low', '0' => 'Medium', '2' => 'High'), '') }}
@@ -125,7 +125,7 @@ Player Search
                                 </div>
                             </div>
                         </div>
-                        <div class="large-12 columns">
+                        <div class="col-lg-12 columns">
                             <label>Preferred Foot</label>
                             <div class="row collapse">
                                 <div class="small-12 columns">
@@ -136,11 +136,11 @@ Player Search
                     </div>
                 </fieldset>
             </div>
-            <div class="large-3 columns">
+            <div class="col-lg-3 columns">
                 <fieldset>
                     <legend>Prices</legend>
                     <div class="row">
-                        <div class="large-12 columns">
+                        <div class="col-lg-12 columns">
                             <label>Console</label>
                             <div class="row collapse">
                                 <div class="small-12 columns">
@@ -153,7 +153,7 @@ Player Search
                             </div>
                         </div>
                         <label class="columns">Price</label>
-                        <div class="large-6 columns">
+                        <div class="col-lg-6 columns">
                             <div class="row collapse">
                                 <div class="small-8 columns">
                                     <input type="text" placeholder="0">
@@ -163,7 +163,7 @@ Player Search
                                 </div>
                             </div>
                         </div>
-                        <div class="large-6 columns">
+                        <div class="col-lg-6 columns">
                             <div class="row collapse">
                                 <div class="small-8 columns">
                                     <input type="text" placeholder="0">
@@ -178,10 +178,10 @@ Player Search
             </div>
         </div>
 			<div class="row">
-				<div class="large-6 columns">
+				<div class="col-lg-6 columns">
 					<fieldset id="player-search-nation">
 						<legend>Nation</legend>
-						<div class="large-8 columns">
+						<div class="col-lg-8 columns">
 							<div class="search-input">
 								<i class="fa fa-search fa-2x"></i> <input type="text" placeholder="Nation search" id="tags">
 								{{-- <p>Nation search will throw up auto completes. If a nation is selected through the search it will get auto checked on the right.</p>
@@ -204,7 +204,7 @@ Player Search
 								});
 							</script>
 						</div>
-						<div class="large-4 columns">
+						<div class="col-lg-4 columns">
 							<ul class="list-unstyled list-h290">
 								@for ($i = 1; $i < 3; $i++)
 								<li><input id="checkbox1" type="checkbox" checked><label for="checkbox1">Nation Selected {{ $i }}</label></li>
@@ -217,10 +217,10 @@ Player Search
 						</div>
 					</fieldset>
 				</div>
-				<div class="large-6 columns">
+				<div class="col-lg-6 columns">
 					<fieldset id="player-search-league">
 						<legend>League / Club</legend>
-						<div class="large-8 columns">
+						<div class="col-lg-8 columns">
 							<div class="search-input">
 								<i class="fa fa-search fa-2x"></i> <input type="text" placeholder="League Search" id="tags">
 								<div class="labels">
@@ -262,7 +262,7 @@ Player Search
 								});
 							</script>
 						</div>
-						<div class="large-4 columns">
+						<div class="col-lg-4 columns">
 							<ul class="list-unstyled list-h290">
 								@for ($i = 1; $i < 21; $i++)
 								<li><input id="checkbox1" type="checkbox"><label for="checkbox1">League Unselected {{ $i }}</label></li>
@@ -273,7 +273,7 @@ Player Search
 				</div>
 			</div>
 			<div class="row">
-				<div class="large-6 columns">
+				<div class="col-lg-6 columns">
 					<fieldset id="player-search-pos">
 						<legend>Position</legend>
 						<ul class="small-block-grid-4 list-unstyled list-checkboxes">
@@ -378,13 +378,13 @@ Player Search
 						$('#right-back').checkboxMaster('input[name=right-back]');
 					</script>
 				</div>
-				<div class="large-6 columns">
+				<div class="col-lg-6 columns">
 					<fieldset>
 						<legend>Additional</legend>
 						<div class="row">
-							<div class="large-6 columns">
+							<div class="col-lg-6 columns">
 								<label class="columns">Age</label>
-								<div class="large-6 columns">
+								<div class="col-lg-6 columns">
 									<div class="row collapse">
 										<div class="small-8 columns">
                                             {{ Form::selectRange('minage', 16, 50) }}
@@ -394,7 +394,7 @@ Player Search
 										</div>
 									</div>
 								</div>
-								<div class="large-6 columns">
+								<div class="col-lg-6 columns">
 									<div class="row collapse">
 										<div class="small-8 columns">
                                             {{ Form::selectRange('maxage', 50, 16) }}
@@ -405,9 +405,9 @@ Player Search
 									</div>
 								</div>
 							</div>
-							<div class="large-6 columns">
+							<div class="col-lg-6 columns">
 								<label class="columns">Age</label>
-								<div class="large-6 columns">
+								<div class="col-lg-6 columns">
 									<div class="row collapse">
 										<div class="small-8 columns">
 											<select>
@@ -421,7 +421,7 @@ Player Search
 										</div>
 									</div>
 								</div>
-								<div class="large-6 columns">
+								<div class="col-lg-6 columns">
 									<div class="row collapse">
 										<div class="small-8 columns">
 											<select>
@@ -436,9 +436,9 @@ Player Search
 									</div>
 								</div>
 							</div>
-							<div class="large-6 columns">
+							<div class="col-lg-6 columns">
 								<label class="columns">Height</label>
-								<div class="large-6 columns">
+								<div class="col-lg-6 columns">
 									<div class="row collapse">
 										<div class="small-8 columns">
 											<select>
@@ -452,7 +452,7 @@ Player Search
 										</div>
 									</div>
 								</div>
-								<div class="large-6 columns">
+								<div class="col-lg-6 columns">
 									<div class="row collapse">
 										<div class="small-8 columns">
 											<select>
@@ -467,9 +467,9 @@ Player Search
 									</div>
 								</div>
 							</div>
-							<div class="large-6 columns">
+							<div class="col-lg-6 columns">
 								<label class="columns">Weight</label>
-								<div class="large-6 columns">
+								<div class="col-lg-6 columns">
 									<div class="row collapse">
 										<div class="small-8 columns">
 											<select>
@@ -483,7 +483,7 @@ Player Search
 										</div>
 									</div>
 								</div>
-								<div class="large-6 columns">
+								<div class="col-lg-6 columns">
 									<div class="row collapse">
 										<div class="small-8 columns">
 											<select>
@@ -503,7 +503,7 @@ Player Search
 				</div>
 			</div>
 			<div class="row">
-				<div class="large-12 columns">
+				<div class="col-lg-12 columns">
 					<ul class="button-group">
 						<li>
                             {{ Form::submit('Search', ['class' => 'small button' ]) }}

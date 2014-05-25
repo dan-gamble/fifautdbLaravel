@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="row">
-	<div class="large-12 columns">
+	<div class="col-lg-12 columns">
 		<h1>Register!</h1>
         {{ Form::open(['route' => 'registration.store']) }}
         	{{ Form::label('username', 'Username') }}
@@ -12,7 +12,7 @@
             {{ Form::label('email', 'Email') }}
             {{ Form::text('email', null, ['required' => 'required']) }}
             {{ $errors->first('email', '<small class="error">:message</small>') }}
-        
+
             {{ Form::label('password', 'Password') }}
             {{ Form::password('password', ['required' => 'required']) }}
             {{ $errors->first('password', '<small class="error">:message</small>') }}

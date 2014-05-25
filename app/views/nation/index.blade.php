@@ -7,7 +7,7 @@
 @section('left-9')
 <h3>Players</h3>
 <hr>
-<ul class="large-block-grid-6">
+<ul class="col-lg-block-grid-6">
     @foreach ($players as $player)
     <li>
         <a href="{{ $player->url_str() }}">@include('layout.card-14')</a>
@@ -17,7 +17,7 @@
 {{ $players->appends(Input::except(array('page')))->links('layout.pagination') }}
 <h3 id="leagues">Leagues</h3>
 <hr>
-<ul class="large-block-grid-4 text-center">
+<ul class="col-lg-block-grid-4 text-center">
     @foreach ($leagues as $league)
     <li>
         <a href="{{ $league->url_str() }}">
@@ -32,8 +32,8 @@
 @section('right-3')
 <h3>Nation</h3>
 <hr>
-@include('layout.ads.ad-300-side')
-<table class="large-12">
+@include('layout.ads.ad-side')
+<table class="col-lg-12">
     <tr>
         <td>Players</td>
         <td>{{ $nation->player_count() }}</td>
