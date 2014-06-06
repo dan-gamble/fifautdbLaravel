@@ -7,7 +7,7 @@
 @section('left-9')
 <h3>Players</h3>
 <hr>
-<ul class="block-grid-md-6">
+<ul class="card-list">
     @foreach ($players as $player)
     <li>
         <a href="{{ $player->url_str() }}">@include('layout.card-14')</a>
@@ -20,7 +20,7 @@
 <h3>Club</h3>
 <hr>
 @include('layout.ads.ad-side')
-<table class="col-lg-12">
+<table class="table table-striped">
     <tr>
         <td>Players</td>
         <td>{{ $club->player_count() }}</td>

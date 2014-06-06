@@ -1,0 +1,6 @@
+.card-list {
+	@extend .list-unstyled;
+	& > li {
+		display: inline-block;
+	}
+}

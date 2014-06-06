@@ -54,7 +54,7 @@
 </ul>
 <div class="row ul-0">
     <div class="col-lg-5 columns">
-        {{ $players->appends(Input::except(array('page')))->links('layout.pagination') }}
+        {{ $players->links() }}
     </div>
 </div>
 @stop

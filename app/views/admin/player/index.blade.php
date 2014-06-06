@@ -4,11 +4,11 @@
 
 @if (Request::isMethod('get'))
 	<div class="row">
-		<div class="col-lg-6 columns">
+		<div class="col-lg-6">
 
 			@if (Session::has('flash_message'))
 
-			<div data-alert="" class="alert-box success">
+			<div class="alert alert-success">
 				{{ Session::get('flash_message') }}
 				<a href="" class="close">×</a>
 			</div>
@@ -18,10 +18,12 @@
 			<h3>Use existing Player</h3>
 			<hr>
 			{{ Form::open(['url' => 'admin/player/find']) }}
-				{{ Form::label('player', 'Find Existing Player') }}
-				{{ Form::text('player') }}
+				<div class="form-group">
+					{{ Form::label('player', 'Find Existing Player') }}
+					{{ Form::text('player', '', ['class' => 'form-control']) }}
+				</div>
 
-				{{ Form::submit("Le'go!", ['class' => 'small button' ]) }}
+				{{ Form::submit("Le'go!", ['class' => 'btn btn-primary' ]) }}
 			{{ Form::close() }}
 		</div>
 		<div class="col-lg-6 columns">

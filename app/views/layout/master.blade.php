@@ -20,18 +20,6 @@
     <div id="content">
         <div class="container">
             <div class="row">
-                <div class="col-lg-3 col-lg-offset-9 columns">
-                    <ul class="inline-list right">
-                        @if (Auth::guest())
-                        <li><a href="/register">Register</a></li>
-                        <li><a href="/login">Log In</a></li>
-                        @else
-                        <li><a href="/logout">Log Out</a></li>
-                        @endif
-                    </ul>
-                </div>
-            </div>
-            <div class="row">
                 <div class="col-lg-8 columns">
                     <div class="right">
                         <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
@@ -61,95 +49,34 @@
                                 </a>
                             </li>
                         </ul>
-                        <form class="navbar-form form-inline navbar-left" role="search">
+                        {{ Form::open(['method' => 'get', 'route' => 'search.global.player', 'class' => 'navbar-form form-inline navbar-left', 'role' => 'search']) }}
                             <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Search">
+                                {{ Form::text('global_search', '', ['placeholder' => 'Searchy search', 'class' => 'form-control']) }}
                             </div>
-                            <button type="submit" class="btn btn-default">Submit</button>
+                            {{ Form::submit('Search', ['class' => 'btn btn-info' ]) }}
                         </form>
                         <ul class="nav navbar-nav navbar-right">
-                            <li><a href="#">Link</a></li>
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="#">Action</a></li>
-                                    <li><a href="#">Another action</a></li>
-                                    <li><a href="#">Something else here</a></li>
-                                    <li class="divider"></li>
-                                    <li><a href="#">Separated link</a></li>
-                                </ul>
-                            </li>
+                            @if (Auth::guest())
+                                <li><a href="/register">Register</a></li>
+                                <li><a href="/login">Log In</a></li>
+                            @else
+                                <li><a href="/logout">Log Out</a></li>
+                            @endif
                         </ul>
                     </div><!-- /.navbar-collapse -->
                 </nav>
-                <div class="contain-to-grid sticky">
-                    <nav class="top-bar" data-topbar>
-
-                        <section class="top-bar-section">
-                            <ul class="right">
-                                <li class="active"><a href="#">Right Button Active</a></li>
-                                <li class="has-dropdown">
-                                    <a href="#">Right Button Dropdown</a>
-                                    <ul class="dropdown">
-                                        <li><a href="#">First link in dropdown</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-
-                            <ul class="left">
-                                <li>
-                                    <a href="/">
-                                        <i class="fa fa-home"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="/player/search">
-                                        <i class="fa fa-search"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="/squad/builder">
-                                        <i class="fa fa-wrench"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="/squad/search">
-                                        <i class="fa fa-users"></i>
-                                    </a>
-                                </li>
-                                <li data-tooltip class="tip-right" title="Shortlist">
-                                    <a href="#">
-                                        <i class="fa fa-list"></i>
-                                    </a>
-                                </li>
-                                <li class="has-form">
-                                    {{ Form::open(['method' => 'get', 'route' => 'search.global.player']) }}
-                                    <div class="row collapse">
-                                        <div class="col-lg-8 small-9 columns">
-                                            {{ Form::text('global_search', '', ['placeholder' => 'Searchy search']) }}
-                                        </div>
-                                        <div class="col-lg-4 small-3 columns">
-                                            {{ Form::submit('Search', ['class' => 'alert button expand' ]) }}
-                                        </div>
-                                    </div>
-                                    {{ Form::close() }}
-                                </li>
-                            </ul>
-                        </section>
-                    </nav>
-                </div>
             </div>
 
             @if(Request::is('admin*'))
             <div class="row">
                 <div class="col-lg-12 columns">
-                    <dl class="sub-nav">
-                        <dt>Admin:</dt>
-                        <dd class="active"><a href="{{ URL::route('admin') }}">Home</a></dd>
-                        <dd><a href="{{ URL::route('admin.totw') }}">Create TOTW</a></dd>
-                        <dd><a href="{{ URL::route('admin.player') }}">Create Player</a></dd>
-                        <dd><a href="#">Suspended</a></dd>
-                    </dl>
+                    <ul class="nav nav-pills">
+                        <li><a href="#">Admin:</a></li>
+                        <li class="active"><a href="{{ URL::route('admin') }}">Home</a></li>
+                        <li><a href="{{ URL::route('admin.totw') }}">Create TOTW</a></li>
+                        <li><a href="{{ URL::route('admin.player') }}">Create Player</a></li>
+                        <li><a href="#">Suspended</a></li>
+                    </ul>
                 </div>
             </div>
             @endif

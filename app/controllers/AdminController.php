@@ -28,7 +28,11 @@ class AdminController extends \BaseController {
 		$playerBack = Player::orderBy('overall_rating', 'desc')->where('common_name', 'LIKE', '%'.$keyword.'%')->get();
 
 		// Create the view and parse the player list
-		return View::make('admin.player.find', ['playerBack' => $playerBack]);
+		return View::make('admin.player.find',
+			[
+				'keyword' => $keyword,
+				'playerBack' => $playerBack
+			]);
 	}
 
 	public function playerExisting($id)
@@ -152,7 +156,7 @@ class AdminController extends \BaseController {
 
 		//return dd($input);
 		// Redirect to create player home with flash messag;
-		return Redirect::to('admin/player')->withFlashMessage($input['player_name'] . " added!");
+		return Redirect::to('admin/player')->withFlashMessage($input['common_name'] . " added!");
 	}
 
 	public function totw()

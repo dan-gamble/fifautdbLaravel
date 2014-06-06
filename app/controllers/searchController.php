@@ -30,7 +30,7 @@ class SearchController extends \BaseController {
         $playersSize = Player::where('common_name', 'LIKE', '%'.$keyword.'%')->count();
 
         // Create the view and parse the player list
-        return View::make('player.search.name',
+        return View::make('search.name',
         [
             'keyword'     => $keyword,
             'clubs'       => $clubs,

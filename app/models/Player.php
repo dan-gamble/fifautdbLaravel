@@ -44,9 +44,9 @@ class Player extends Eloquent {
     {
         $attr = space_to_underscore($label);
         if ($secondary != null) {
-            $output = '<li>'.$label.' ('.$secondary.')'.Form::text($attr, $this->$attr, ['class' => 'existing-player-input']).'</li>';
+            $output = '<li>'.$label.' ('.$secondary.')'.Form::text($attr, $this->$attr, ['class' => 'form-control']).'</li>';
         } else {
-            $output = '<li>'.$label.Form::text($attr, $this->$attr, ['class' => 'existing-player-input']).'</li>';
+            $output = '<li>'.$label.Form::text($attr, $this->$attr, ['class' => 'form-control']).'</li>';
         }
 
         return $output;

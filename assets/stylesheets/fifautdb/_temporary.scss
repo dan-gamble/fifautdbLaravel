@@ -1,15 +1,9 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,600);
 
-.label-highest { background: #0b6700; }
-.label-high { background: #4eb800; }
-.label-normal { background: #c99b00; }
-.label-low { background: #b14d00; }
-.label-lowest { background: #850000; }
-
 $font-family-sans-serif: 'Open Sans', sans-serif;
 $left-gutter: rem-calc(70);
 
-.container { width: 1235px; }
+.container { width: 1240px; }
 
 #nav {
   background: $brand-color;
@@ -378,13 +372,12 @@ form { // Definitely needs to be fixed
 
 .main-content {
 	float: left;
-	margin-right: 15px;
-	width: 870px;
+	width: 70%;
 }
 
 aside {
 	float: right;
-	width: 350px;
+	width: 28.5%;
 }
 
 .tabs {

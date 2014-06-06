@@ -2,30 +2,21 @@
 
 @section('content')
 <div class="row">
-	<div class="col-lg-12 columns">
+	<div class="col-lg-12">
         <div class="row">
-			<div class="col-lg-9 columns">
-				<div class="row ul-0">
-					<div class="col-lg-5 columns">
-                        {{ $players->appends(Input::except(array('page')))->links('layout.pagination') }}
-					</div>
-					<div class="col-lg-5 col-lg-offset-2 columns">
-						<dl class="sub-nav right">
-							<dt>Filter:</dt>
-							<dd class="active"><a href="#">IF</a></dd>
-							<dd><a href="#">No IF's</a></dd>
-						</dl>
-					</div>
-				</div>
+			<div class="col-lg-12">
+                <div>
+                    {{ $players->links() }}
+                </div>
 				<p>Let cards be draggable to a <code>#nav</code> 'shortlist' icon that can hold an maximum of 11 players (If the user tries to drag a 12th player in they can choose which player to replace). You can then do multiple functions with said players. Mainly start a squad builder with all players in the shortlist.</p>
-				<ul class="col-lg-block-grid-6">
+				<ul class="card-list">
 					@foreach ($players as $player)
 					<li>
 						<a href="{{ $player->url_str() }}">@include('layout.card-14')</a>
 					</li>
 					@endforeach
 				</ul>
-                <table class="col-lg-12">
+                <table class="table table-striped">
                     <thead>
                         <tr>
                             <th>Player</th>
@@ -53,7 +44,7 @@
                                 <img src="/assets/img/nations/{{ $player->nation_id }}.png" height="16" width="26">
                             </td>
                             <td>{{ $player->overall_rating }}</td>
-                            <td>{{ $player->role }}</td>
+                            <td>{{ $player->role() }}</td>
                             <td>{{ $player->card_att1 }}</td>
                             <td>{{ $player->card_att2 }}</td>
                             <td>{{ $player->card_att3 }}</td>
@@ -69,36 +60,10 @@
                         @endforeach
                     </tbody>
                 </table>
-				<div class="row ul-0">
-					<div class="col-lg-5 columns">
-                        {{ $players->appends(Input::except(array('page')))->links('layout.pagination') }}
-					</div>
-					<div class="col-lg-5 col-lg-offset-2 columns">
-						<dl class="sub-nav right">
-                            <dt>Filter:</dt>
-                            <dd class="active"><a href="#">IF</a></dd>
-                            <dd><a href="#">No IF's</a></dd>
-						</dl>
-					</div>
-				</div>
-			</div>
-            <div class="col-lg-3 columns">
-                {{ Form::open() }}
-                <div class="col-lg-12">
-                    <fieldset id="player-search-nation">
-                        <legend>Nation</legend>
-                        <ul class="list-unstyled list-h290">
-                            @for ($i = 1; $i < 3; $i++)
-                            <li><input id="checkbox1" type="checkbox" checked><label for="checkbox1">Nation Selected {{ $i }}</label></li>
-                            @endfor
-                            <li class="divide"></li>
-                            @for ($i = 1; $i < 9; $i++)
-                            <li><input id="checkbox1" type="checkbox"><label for="checkbox1">Nation Unselected {{ $i }}</label></li>
-                            @endfor
-                        </ul>
-                    </fieldset>
+                <div>
+                    {{ $players->links() }}
                 </div>
-            </div>
+			</div>
 		</div>
 	</div>
 </div>
